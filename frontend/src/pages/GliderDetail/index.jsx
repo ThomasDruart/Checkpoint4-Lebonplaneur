@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
-import { GliderDetailContainer, Infos } from "./style";
+import { GliderDetailContainer, Infos, LinkBack } from "./style";
 
 export default function GliderDetail(props) {
   const [gliderData, setGliderData] = useState([]);
@@ -33,7 +33,7 @@ export default function GliderDetail(props) {
           <p>Contact : {gliderData.email}</p>
         </div>
       </Infos>
-      <button>Retour</button>
+      <LinkBack to="/">Retour</LinkBack>
     </GliderDetailContainer>
   );
 }
