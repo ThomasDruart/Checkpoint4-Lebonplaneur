@@ -1,5 +1,5 @@
 import React from "react";
-import { HeaderContainer, SMenu, PostButton } from "./style";
+import { HeaderContainer, SMenu } from "./style";
 import glider from "../../images/glider.jpg";
 
 export default function Header() {
@@ -7,10 +7,10 @@ export default function Header() {
     <HeaderContainer>
       <SMenu>
         <h1>Lebonplaneur</h1>
-        <PostButton>Déposer une annonce</PostButton>
+        <button>Déposer une annonce</button>
         <div>
           <input name="recherche" type="text" placeholder="Rechercher" />
-          <button>&#128269;</button>
+          <i class="fas fa-search"></i>
         </div>
         <h2>Se connecter</h2>
       </SMenu>

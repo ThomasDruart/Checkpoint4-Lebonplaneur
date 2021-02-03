@@ -10,10 +10,27 @@ export const HeaderContainer = styled.div`
   h2 {
     font-size: 1.3em;
     color: #4237c1;
+    border: 2px solid #4237c1;
+    border-radius: 0.2em;
+    font-size: 1.2em;
+    padding: 0.5em;
   }
 
   img {
     width: 100%;
+  }
+
+  input {
+    border: 0;
+    outline: 0;
+    border-bottom: 2px solid #4237c1;
+    padding: 0.4em;
+    border-radius: 0.2em;
+  }
+
+  i {
+    color: #4237c1;
+    font-size: 1.2em;
   }
 `;
 
@@ -28,14 +45,13 @@ export const SMenu = styled.div`
     flex-direction: column;
     height: 30vh;
   }
-`;
 
-export const PostButton = styled.button`
+  button {
   font-size: 1.2em;
   padding: 0.5em;
   border: 0;
   color:  #f1eeea;
-  border-radius: 4px;
+  border-radius: 0.2em;
   background-color: #4237c1;
 
   &:hover {
@@ -44,5 +60,4 @@ export const PostButton = styled.button`
   transition: transform 150ms;
   transform: scale(1.01);
   }
-}
 `;

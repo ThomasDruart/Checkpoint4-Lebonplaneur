@@ -4,7 +4,7 @@ export const GlidersContainer = styled.div`
   margin: 5vh 0;
 
   h1 {
-    font-size: 2em;
+    font-size: 2.5em;
     color: #4237c1;
     text-align: center;
     font-family: "Bai Jamjuree", sans-serif;
