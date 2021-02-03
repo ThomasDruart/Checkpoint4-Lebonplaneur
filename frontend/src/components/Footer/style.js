@@ -6,7 +6,8 @@ export const FooterContainer = styled.div`
   flex-direction: column;
   align-items: center;
   color: #f1eeea;
-  padding: 5vh 0;
+  padding: 5vh;
+  font-family: "Bai Jamjuree", sans-serif;
 
   p {
     font-size: 0.8em;
@@ -21,16 +22,18 @@ export const MainDiv = styled.div`
   padding: 0 3vw;
 
   li {
-    padding: 0.5vh 0;
+    padding: 0.5vh 10vw;
   }
 
   div {
     display: flex;
     flex-direction: row;
+    padding: 0.5vh 10vw;
   }
 
   img {
     height: 3vh;
+    padding: 0 0.5vw;
   }
 
   @media screen and (max-width: 768px) {

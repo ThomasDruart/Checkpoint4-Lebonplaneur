@@ -13,7 +13,7 @@ export default function Footer() {
           <li>Contactez-nous</li>
         </ul>
         <div>
-          <h3>Suivez-nous</h3>
+          <h3>Suivez-nous :</h3>
           <img src={facebook} alt="Facebook" />
           <img src={twitter} alt="Twitter" />
         </div>
