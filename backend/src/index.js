@@ -27,6 +27,19 @@ app.get("/gliders", (req, res) => {
   );
 });
 
+// Get gliders by id
+app.get("/gliders/:id", (req, res) => {
+  connection.query(
+    "SELECT image, image2, image3, model, year, price, resume  FROM gliders WHERE id=? ",
+    [req.params.id],
+    (err, result) => {
+      if (err)
+        return res.status(500).send("Error has occured during the operation.");
+      return res.status(200).json(result);
+    }
+  );
+});
+
 // config
 app.use(express.json());
 app.use(cors());

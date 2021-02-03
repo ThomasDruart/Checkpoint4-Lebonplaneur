@@ -1,8 +1,29 @@
-# Checkpoint4-Lebonplaneur
+# Checkpoint4-Lebonplaneur Wild Code School
 
 Site de petites annonces dédié aux planeurs en France et en Europe.
 
-# Technologies :
+Product backlog :https://docs.google.com/spreadsheets/d/1QOUen9ERxSxBjyPCaYUHS7TEueDRBjnGH5TLfTMhROk/edit#gid=0
+
+Wireframe : https://www.figma.com/file/88syeHuZVTzVRceNAdeVxL/Untitled?node-id=0%3A1&frame-preset-name=Desktop
+
+# Technologies Front :
+
+- React
+- Styled-reset
+- Styled-components
+- React-rooter
+- Axios
+- Dotenv
+
+# Technologies Back :
+
+- nodeJS
+- express
+- dotenv
+- express
+- nodemon
+- mysql2
+- cors
 
 # Installation :
 
