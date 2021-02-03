@@ -3,7 +3,7 @@ import {} from "react-router-dom";
 
 import Header from "./components/Header/";
 import Footer from "./components/Footer/";
-import GlidersList from "./components/GlidersList";
+import GlidersList from "./pages/GlidersList";
 
 function App() {
   return (
