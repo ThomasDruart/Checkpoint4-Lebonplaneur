@@ -1,5 +1,5 @@
 import React from "react";
-import { CardContainer, TextZone } from "./style";
+import { CardContainer, TextZone, LinkInfo } from "./style";
 
 export default function GliderCard({ gliderInfo }) {
   return (
@@ -13,7 +13,7 @@ export default function GliderCard({ gliderInfo }) {
           <h3>{gliderInfo.location}</h3>
           <h3>{gliderInfo.price} €</h3>
         </div>
-        <button>More info</button>
+        <LinkInfo to={`/gliders/${gliderInfo.id}`}>More info</LinkInfo>
       </TextZone>
     </CardContainer>
   );

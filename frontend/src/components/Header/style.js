@@ -18,6 +18,7 @@ export const HeaderContainer = styled.div`
 
   img {
     width: 100%;
+    object-fit: cover;
   }
 
   input {

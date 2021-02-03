@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const CardContainer = styled.div`
-  background-color: #e6e6e4;
+  background-color: #f8fbfe;
   width: 25vw;
   border-radius: 0.2em;
   margin: 5vh 3vw;
@@ -26,6 +27,9 @@ export const CardContainer = styled.div`
 
 export const TextZone = styled.div`
   padding: 1vh 1vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   h2 {
     font-size: 1.5em;
@@ -35,23 +39,28 @@ export const TextZone = styled.div`
   div {
     display: flex;
     justify-content: space-around;
-    margin: 1vh 0;
+    margin: 1.5vh 0;
+  }
+`;
+
+export const LinkInfo = styled(Link)`
+  text-decoration: none;
+  text-align: center;
+  margin: 0 7vw;
+  padding: 0.5em;
+  color: #f1eeea;
+  border-radius: 0.2em;
+  border: 0;
+  background-color: #678bad;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 0.1em 0.1em 0 #777777;
+    transition: transform 150ms;
+    transform: scale(1.01);
   }
 
-  button {
-    display: block;
-    margin: auto;
-    padding: 0.5em;
-    color: #f1eeea;
-    border-radius: 0.2em;
-    border: 0;
-    background-color: #678bad;
-
-    &:hover {
-      cursor: pointer;
-      box-shadow: 0 0.1em 0.1em 0 #777777;
-      transition: transform 150ms;
-      transform: scale(1.01);
-    }
+  @media screen and (max-width: 768px) {
+    margin: 0 25vw;
   }
 `;
