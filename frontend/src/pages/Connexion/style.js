@@ -74,7 +74,7 @@ export const NotClientButton = styled.button`
   color: #4237c1;
   background-color: white;
   border: 2px solid #4237c1;
-  margin-bottom: 15px;
+  margin-bottom: 5vh;
   outline: none;
   @media screen and (max-width: 768px) {
     width: 45vw;

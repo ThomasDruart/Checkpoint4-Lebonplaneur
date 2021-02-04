@@ -11,6 +11,7 @@ Wireframe : https://www.figma.com/file/88syeHuZVTzVRceNAdeVxL/Untitled?node-id=0
 - Consultation des annonces
 - Afficher le détail d'une annonce
 - Poster une nouvelle annonce
+- Page login / register (frontend ok, backend en cours)
 
 # Technologies Front :
 
