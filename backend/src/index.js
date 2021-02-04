@@ -44,6 +44,23 @@ app.get("/gliders/:idGlider", (req, res) => {
   );
 });
 
+// Post a glider
+app.post("/gliders", (req, res) => {
+  const { image, model, year, resume, price, location, users_id } = req.body;
+  connection.query(
+    "INSERT INTO gliders(image, model, year, resume, price, location, users_id) VALUES(?, ?, ?, ?, ?, ?, ?)",
+    [image, model, year, resume, price, location, users_id],
+    (err, results) => {
+      if (err) {
+        console.log(err);
+        res.status(500).send("Error posting a glider");
+      } else {
+        res.status(200).send("Successfully added");
+      }
+    }
+  );
+});
+
 app.listen(port, () => {
   console.log(`Server is runing on ${port}`);
 });
