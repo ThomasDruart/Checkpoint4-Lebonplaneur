@@ -1,5 +1,5 @@
 import React from "react";
-import { HeaderContainer, SMenu, LogoLink, PostLink } from "./style";
+import { HeaderContainer, SMenu, LogoLink, PostLink, LoginLink } from "./style";
 import glider from "../../images/glider.jpg";
 
 export default function Header() {
@@ -12,7 +12,7 @@ export default function Header() {
           <input name="recherche" type="text" placeholder="Rechercher" />
           <i className="fas fa-search"></i>
         </div>
-        <h2>Se connecter</h2>
+        <LoginLink to="/connexion">Se connecter</LoginLink>
       </SMenu>
       <img src={glider} alt="planeur" />
     </HeaderContainer>

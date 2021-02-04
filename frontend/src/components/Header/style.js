@@ -2,15 +2,6 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const HeaderContainer = styled.div`
-  h2 {
-    font-size: 1.3em;
-    color: #4237c1;
-    border: 2px solid #4237c1;
-    border-radius: 0.2em;
-    font-size: 1.2em;
-    padding: 0.5em;
-  }
-
   img {
     width: 100%;
     object-fit: cover;
@@ -65,4 +56,14 @@ export const PostLink = styled(Link)`
     transition: transform 150ms;
     transform: scale(1.01);
   }
+`;
+
+export const LoginLink = styled(Link)`
+  font-size: 1.3em;
+  color: #4237c1;
+  border: 2px solid #4237c1;
+  border-radius: 0.2em;
+  font-size: 1.2em;
+  padding: 0.5em;
+  text-decoration: none;
 `;

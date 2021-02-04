@@ -6,6 +6,7 @@ import Footer from "./components/Footer/";
 import GlidersList from "./pages/GlidersList";
 import GliderDetail from "./pages/GliderDetail";
 import PostForm from "./pages/PostForm";
+import Connexion from "./pages/Connexion";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Switch>
         <Route path="/gliders/:id" component={GliderDetail} />
         <Route path="/post" component={PostForm} />
+        <Route path="/connexion" component={Connexion} />
         <Route exact path="/" component={GlidersList} />
       </Switch>
       <Footer />
