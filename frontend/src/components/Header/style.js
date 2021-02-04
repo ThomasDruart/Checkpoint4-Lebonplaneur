@@ -2,12 +2,6 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const HeaderContainer = styled.div`
-  h1 {
-    font-size: 3em;
-    color: #4237c1;
-    font-family: "Bai Jamjuree", sans-serif;
-  }
-
   h2 {
     font-size: 1.3em;
     color: #4237c1;
@@ -47,6 +41,13 @@ export const SMenu = styled.div`
     flex-direction: column;
     height: 30vh;
   }
+`;
+
+export const LogoLink = styled(Link)`
+  font-size: 3em;
+  color: #4237c1;
+  font-family: "Bai Jamjuree", sans-serif;
+  text-decoration: none;
 `;
 
 export const PostLink = styled(Link)`

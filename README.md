@@ -6,6 +6,12 @@ Product backlog :https://docs.google.com/spreadsheets/d/1QOUen9ERxSxBjyPCaYUHS7T
 
 Wireframe : https://www.figma.com/file/88syeHuZVTzVRceNAdeVxL/Untitled?node-id=0%3A1&frame-preset-name=Desktop
 
+# Fonctionnalités :
+
+- Consultation des annonces
+- Afficher le détail d'une annonce
+- Poster une nouvelle annonce
+
 # Technologies Front :
 
 - React

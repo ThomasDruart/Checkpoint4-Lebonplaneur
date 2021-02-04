@@ -1,7 +1,13 @@
 import React from "react";
 import Axios from "axios";
 import { useForm } from "react-hook-form";
-import { BackLink } from "./style";
+import {
+  MainContainer,
+  FormBox,
+  BackLink,
+  TextInput,
+  SubmitInput,
+} from "./style";
 
 export default function PostForm() {
   const { register, handleSubmit } = useForm();
@@ -13,41 +19,75 @@ export default function PostForm() {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit(onSubmit)}>
+    <MainContainer>
+      <h1>Déposez votre annonce</h1>
+      <FormBox onSubmit={handleSubmit(onSubmit)}>
         <div>
-          <label form="image">Lien de la photo</label>
-          <input ref={register} type="text" name="image" required />
+          <TextInput
+            ref={register}
+            type="text"
+            name="image"
+            placeholder="Lien de la photo"
+            required
+          />
         </div>
         <div>
-          <label form="model">Modèle</label>
-          <input ref={register} type="text" name="model" required />
+          <TextInput
+            ref={register}
+            type="text"
+            name="model"
+            placeholder="Modèle"
+            required
+          />
         </div>
         <div>
-          <label form="year">Année</label>
-          <input ref={register} type="text" name="year" required />
+          <TextInput
+            ref={register}
+            type="text"
+            name="year"
+            placeholder="Année"
+            required
+          />
         </div>
         <div>
-          <label form="resume">Description</label>
-          <textarea ref={register} type="text" name="resume" required />
+          <textarea
+            ref={register}
+            type="text"
+            name="resume"
+            placeholder="Déscription"
+            required
+          />
         </div>
         <div>
-          <label form="price">Prix</label>
-          <input ref={register} type="text" name="price" required />
+          <TextInput
+            ref={register}
+            type="text"
+            name="price"
+            placeholder="Prix (€)"
+            required
+          />
         </div>
         <div>
-          <label form="location">Localisation</label>
-          <input ref={register} type="text" name="location" required />
+          <TextInput
+            ref={register}
+            type="text"
+            name="location"
+            placeholder="Localisation"
+            required
+          />
         </div>
         <div>
-          <label form="users_id">users_id</label>
-          <input ref={register} type="text" name="users_id" />
+          <TextInput
+            ref={register}
+            type="text"
+            name="users_id"
+            placeholder="Vendeur"
+            required
+          />
         </div>
-        <div>
-          <input type="submit" value="Poster" />
-        </div>
-      </form>
+        <SubmitInput type="submit" value="Poster" />
+      </FormBox>
       <BackLink to="/">Retour</BackLink>
-    </div>
+    </MainContainer>
   );
 }
