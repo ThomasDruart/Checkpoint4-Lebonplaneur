@@ -1,13 +1,13 @@
 import styled from "styled-components";
-//import { Link } from "react-router-dom";
 
 export const ConnexionContainer = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
-  min-height: 65vh;
-  width: 100%;
   flex-direction: column;
+  align-items: center;
+  min-height: 40vh;
+  width: 100%;
+  margin-top: 10vh;
 `;
 
 export const Formulaire = styled.form`
@@ -75,6 +75,7 @@ export const NotClientButton = styled.button`
   background-color: white;
   border: 2px solid #4237c1;
   margin-bottom: 15px;
+  outline: none;
   @media screen and (max-width: 768px) {
     width: 45vw;
   }
