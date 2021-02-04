@@ -5,6 +5,7 @@ import Header from "./components/Header/";
 import Footer from "./components/Footer/";
 import GlidersList from "./pages/GlidersList";
 import GliderDetail from "./pages/GliderDetail";
+import PostForm from "./pages/PostForm";
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
       <Reset />
       <Header />
       <Switch>
-        <Route exact path="/gliders/:id" component={GliderDetail} />
+        <Route path="/gliders/:id" component={GliderDetail} />
+        <Route path="/post" component={PostForm} />
         <Route exact path="/" component={GlidersList} />
       </Switch>
       <Footer />

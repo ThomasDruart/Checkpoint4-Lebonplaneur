@@ -33,6 +33,7 @@ export const GliderDetailContainer = styled.div`
 
 export const Infos = styled.div`
   border: solid 1px #4237c1;
+  background-color: #f8fbfe;
   padding: 2vh 2vw;
   margin: 2vh 0;
   max-width: 60vw;

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const HeaderContainer = styled.div`
   h1 {
@@ -46,19 +47,21 @@ export const SMenu = styled.div`
     flex-direction: column;
     height: 30vh;
   }
+`;
 
-  button {
+export const PostLink = styled(Link)`
   font-size: 1.2em;
+  text-decoration: none;
   padding: 0.5em;
   border: 0;
-  color:  #f1eeea;
+  color: #f1eeea;
   border-radius: 0.2em;
   background-color: #4237c1;
 
   &:hover {
-  cursor: pointer;
-  box-shadow: 0 0.1em 0.1em 0 #777777;
-  transition: transform 150ms;
-  transform: scale(1.01);
+    cursor: pointer;
+    box-shadow: 0 0.1em 0.1em 0 #777777;
+    transition: transform 150ms;
+    transform: scale(1.01);
   }
 `;

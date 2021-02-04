@@ -13,7 +13,6 @@ Wireframe : https://www.figma.com/file/88syeHuZVTzVRceNAdeVxL/Untitled?node-id=0
 - Styled-components
 - React-rooter
 - Axios
-- Dotenv
 
 # Technologies Back :
 
