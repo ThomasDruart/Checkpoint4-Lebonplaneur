@@ -61,6 +61,22 @@ app.post("/gliders", (req, res) => {
   );
 });
 
+// search glider by model
+app.get("/search", (req, res) => {
+  const { include } = req.query;
+  connection.query(
+    `SELECT * FROM gliders WHERE model LIKE '%${include}%'`,
+    (err, results) => {
+      if (err) {
+        console.log(err);
+        res.status(500).send("Error retrieving data");
+      } else {
+        res.status(200).json(results);
+      }
+    }
+  );
+});
+
 app.listen(port, () => {
   console.log(`Server is runing on ${port}`);
 });
