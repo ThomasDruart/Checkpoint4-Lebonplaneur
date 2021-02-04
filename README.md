@@ -26,11 +26,11 @@ Wireframe : https://www.figma.com/file/88syeHuZVTzVRceNAdeVxL/Untitled?node-id=0
 
 - nodeJS
 - express
-- dotenv
 - express
-- nodemon
 - mysql2
-- cors
+- bcrypt
+- passport
+- JWT
 
 # Installation :
 
