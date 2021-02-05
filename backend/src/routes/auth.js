@@ -6,7 +6,7 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 require("../passport-strategies");
 
-router.post("/signup", async (req, res) => {
+router.post("/register", async (req, res) => {
   try {
     const formData = req.body;
     formData.password = bcrypt.hashSync(formData.password, jwt_rounds);
