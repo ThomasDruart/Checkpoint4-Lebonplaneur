@@ -1,3 +1,5 @@
+<img src="https://github.com/ThomasDruart/Checkpoint4-Lebonplaneur/blob/dev/frontend/src/images/gliderLogo.png?raw=true" width="250">
+
 # Checkpoint4-Lebonplaneur Wild Code School
 
 Site de petites annonces dédié aux planeurs en France et en Europe.
