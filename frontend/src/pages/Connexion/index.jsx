@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-//import Axios from "axios";
+import Axios from "axios";
 import { useForm } from "react-hook-form";
 import { ConnexionContainer, Formulaire, NotClientButton } from "./style";
 
@@ -8,17 +8,22 @@ export default function Connexion() {
   const { register, handleSubmit } = useForm();
 
   const onSubmitRegister = (data) => {
-    console.log(data);
-    // Axios.post("http://localhost:5050/auth/register", data).then(function () {
-    //   alert("Inscription validée");
-    // });
+    Axios.post("http://localhost:5050/auth/register", data).then((res) => {
+      alert("Inscription validée");
+      console.log(res.data) // token
+      }
+    );
   };
 
   const onSubmitLogin = (data) => {
-    console.log(data);
-    // Axios.post("http://localhost:5050/login", data).then(function () {
-    //   alert("Vous êtes maintenant connecté");
-    // });
+    Axios.post("http://localhost:5050/auth/login", data).then((res) => {
+      alert("Vous êtes maintenant connecté");
+      console.log(res.data)
+      }
+    );
+
+    //  setToken(res.data)
+    // window.push(... link new page)
   };
 
   return (

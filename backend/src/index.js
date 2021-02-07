@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(cors());
 
 // Auth routes
-//app.use("/auth", require("./routes/auth"));
+app.use("/auth", require("./routes/auth"));
 app.use("/", require("./routes/misc"));
 
 // 404 and server launch
