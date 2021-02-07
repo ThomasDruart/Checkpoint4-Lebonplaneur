@@ -20,10 +20,9 @@ export default function Connexion() {
       alert("Vous êtes maintenant connecté");
       console.log(res.data)
       }
-    );
-
-    //  setToken(res.data)
-    // window.push(... link new page)
+    ).catch(err => {
+      console.log(err)
+    });
   };
 
   return (
