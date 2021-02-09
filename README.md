@@ -42,11 +42,11 @@ Wireframe : https://www.figma.com/file/88syeHuZVTzVRceNAdeVxL/Untitled?node-id=0
     $ installer la BDD (sql)
     $ cd Checkpoint4-Lebonplaneur/backend
     $ npm install
-    $ fill in the .env file
+    $ complémenter le fichier .env
     $ npm start
     
     $ cd Checkpoint4-Lebonplaneur/frontend
     $ npm install
-    $ fill in the .env file
+    $ complémenter le fichier .env
     $ npm start
 ```
