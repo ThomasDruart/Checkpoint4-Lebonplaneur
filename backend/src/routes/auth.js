@@ -6,6 +6,16 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 require("../passport-strategies");
 
+router.post("/login", passport.authenticate("local"), async (req, res) => {
+  try {
+    const token = jwt.sign(req.user, jwt_secret);
+    res.status(200).json({ user: req.user, token });
+  } catch (e) {
+    console.log(e);
+    res.status(500).send("Erreur serveur");
+  }
+});
+
 router.post("/register", async (req, res) => {
   try {
     const formData = req.body;
@@ -20,16 +30,6 @@ router.post("/register", async (req, res) => {
   } catch (e) {
     console.log(e);
     res.status(500).json(e);
-  }
-});
-
-router.post("/login", passport.authenticate("local"), async (req, res) => {
-  try {
-    const token = jwt.sign(req.user, jwt_secret);
-    res.status(200).json({ user: req.user, token });
-  } catch (e) {
-    res.status(500).send("Erreur serveur");
-    console.log(e);
   }
 });
 
