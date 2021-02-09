@@ -12,7 +12,7 @@ Wireframe : https://www.figma.com/file/88syeHuZVTzVRceNAdeVxL/Untitled?node-id=0
 - Consultation des annonces
 - Afficher le détail d'une annonce
 - Poster une nouvelle annonce
-- Page login / register (frontend ok, backend en cours)
+- Page login / register
 
 # Technologies Front :
 
@@ -22,6 +22,8 @@ Wireframe : https://www.figma.com/file/88syeHuZVTzVRceNAdeVxL/Untitled?node-id=0
 - React-rooter
 - Axios
 - React-hook-form
+- React-toastify
+- Universal-cookie
 
 # Technologies Back :
 
@@ -40,8 +42,11 @@ Wireframe : https://www.figma.com/file/88syeHuZVTzVRceNAdeVxL/Untitled?node-id=0
     $ installer la BDD (sql)
     $ cd Checkpoint4-Lebonplaneur/backend
     $ npm install
+    $ fill in the .env file
     $ npm start
+    
     $ cd Checkpoint4-Lebonplaneur/frontend
     $ npm install
+    $ fill in the .env file
     $ npm start
 ```
