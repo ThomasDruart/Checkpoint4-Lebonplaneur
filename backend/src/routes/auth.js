@@ -24,7 +24,7 @@ router.post("/register", async (req, res) => {
 router.post("/login", passport.authenticate("local"), async (req, res) => {
   try {
     const token = jwt.sign(req.user, jwt_secret);
-    res.status(200).json(token);
+    res.status(200).json({user: req.user, token});
   } catch (e) {
     res.status(500).send("Erreur serveur");
     console.log(e)
