@@ -16,7 +16,7 @@ router.get("/gliders", (req, res) => {
   );
 });
 
-// Get gliders by id
+// Get glider infos by id
 router.get("/gliders/:idGlider", (req, res) => {
   db.query(
     "SELECT image, image2, image3, model, year, price, resume, users.name, users.email FROM gliders JOIN users ON users.id=gliders.users_id WHERE gliders.id=?",
@@ -55,6 +55,21 @@ router.get("/search", (req, res) => {
       if (err) {
         console.log(err);
         res.status(500).send("Error retrieving data");
+      } else {
+        res.status(200).json(results);
+      }
+    }
+  );
+});
+
+// Get all adverts by user
+router.get("/:userId/adverts", (req, res) => {
+  db.query(
+    `SELECT image, image2, image3, model, year, resume, price, location FROM gliders WHERE users_id=?`,
+    [req.params.userId],
+    (err, results) => {
+      if (err) {
+        res.status(500).send("Error retrieving adverts");
       } else {
         res.status(200).json(results);
       }
