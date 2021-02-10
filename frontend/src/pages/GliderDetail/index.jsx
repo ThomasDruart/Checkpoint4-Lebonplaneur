@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import Axios from "axios";
+import { api } from "../../conf";
 import { GliderDetailContainer, Infos, LinkBack } from "./style";
 
 export default function GliderDetail(props) {
   const [gliderData, setGliderData] = useState([]);
 
   useEffect(() => {
-    Axios.get(`http://localhost:5050/gliders/${props.match.params.id}`).then(
+    api.get(`/gliders/${props.match.params.id}`).then(
       (res) => {
         console.log(res.data);
         setGliderData(res.data[0]);
