@@ -4,8 +4,8 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useSelector } from "react-redux";
 
-import Header from "./components/Header/";
-import Footer from "./components/Footer/";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 import GlidersList from "./pages/GlidersList";
 import GliderDetail from "./pages/GliderDetail";
 import PostForm from "./pages/PostForm";
