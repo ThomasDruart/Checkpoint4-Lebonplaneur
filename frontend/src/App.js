@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import GlidersList from "./pages/GlidersList";
 import GliderDetail from "./pages/GliderDetail";
 import PostForm from "./pages/PostForm";
+import UserAdverts from "./pages/UserAdverts";
 import Connexion from "./pages/Connexion";
 
 const PrivateRoute = (props) => {
@@ -32,7 +33,7 @@ function App() {
         <Route path="/gliders/:id" component={GliderDetail} />
         <Route path="/post" component={PostForm} />
         <Route path="/connexion" component={Connexion} />
-        <PrivateRoute path="/private" component={GlidersList} />
+        <PrivateRoute path="/mesAnnonces" component={UserAdverts} />
         <Route exact path="/" component={GlidersList} />
       </Switch>
       <Footer />

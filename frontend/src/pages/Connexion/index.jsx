@@ -46,7 +46,7 @@ export default function Connexion() {
         api.defaults.headers.authorization = "Bearer " + token;
         dispatch({ type: "LOGIN", user });
         toast(`Vous êtes connecté`);
-        history.push("/private");
+        history.push("/mesAnnonces");
       })
       .catch((e) => {
         toast.error("Mauvaise combinaison email / mot de passe");
