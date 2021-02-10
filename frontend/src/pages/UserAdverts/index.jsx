@@ -13,7 +13,7 @@ export default function UserAdverts() {
         setUserAds(res.data);
       }
     );
-  }, []);
+  }, [user]);
 
   return (
   <div>
