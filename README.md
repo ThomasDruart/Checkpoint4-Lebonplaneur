@@ -1,7 +1,6 @@
 # Checkpoint4-Lebonplaneur Wild Code School
 
 Site de petites annonces dédié aux planeurs en France et en Europe.
-Checkpoint effectué sur deux jours.
 
 Product backlog :https://docs.google.com/spreadsheets/d/1QOUen9ERxSxBjyPCaYUHS7TEueDRBjnGH5TLfTMhROk/edit#gid=0
 
@@ -13,10 +12,12 @@ Wireframe : https://www.figma.com/file/88syeHuZVTzVRceNAdeVxL/Untitled?node-id=0
 - Afficher le détail d'une annonce
 - Poster une nouvelle annonce
 - Page login / register
+- Afficher ses annonces sur son espace sécurisé (en cours)
 
 # Technologies Front :
 
 - React
+- Redux
 - Styled-reset
 - Styled-components
 - React-rooter
