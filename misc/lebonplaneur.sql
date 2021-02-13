@@ -58,11 +58,13 @@ DROP TABLE IF EXISTS `users`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `users` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(48) DEFAULT NULL,
-  `email` varchar(48) DEFAULT NULL,
-  `password` varchar(48) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+  `name` varchar(48) NOT NULL,
+  `email` varchar(48) NOT NULL,
+  `password` varchar(128) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `email_UNIQUE` (`email`),
+  UNIQUE KEY `name_UNIQUE` (`name`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -71,7 +73,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'TomGun','tomgun@gmail.com','tomgun'),(2,'Chuck Yeager','chucky@gmail.com','chucky'),(3,'Le Baron Rouge','lebaronrouge@gmail.com','lebaron'),(4,'Pappy Boyington','pappy@gmail.com','pappy');
+INSERT INTO `users` VALUES (1,'User test','usertest@test.com','$2b$10$cGXvinwgYNJE.BCkibLp/.hxaOvw8XXklG615z8xnaBrWuwB9ytyq'),(2,'Chuck Yeager','chucky@gmail.com','$2b$10$cGXvinwgYNJE.BCkibLp/.hxaOvw8XXklG615z8xnaBrWuwB9ytyq'),(3,'Le Baron Rouge','lebaronrouge@gmail.com','$2b$10$cGXvinwgYNJE.BCkibLp/.hxaOvw8XXklG615z8xnaBrWuwB9ytyq'),(4,'Pappy Boyington','pappy@gmail.com','$2b$10$cGXvinwgYNJE.BCkibLp/.hxaOvw8XXklG615z8xnaBrWuwB9ytyq');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -84,4 +86,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-02-04 10:44:30
+-- Dump completed on 2021-02-10 16:43:23

@@ -1,37 +1,62 @@
 import React, { useState } from "react";
-import Axios from "axios";
+import { useHistory } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import { useDispatch } from "react-redux";
+import { toast } from "react-toastify";
+import { api, cookies } from "../../conf";
 import { ConnexionContainer, Formulaire, NotClientButton } from "./style";
 
 export default function Connexion() {
   const [displayForm, setDisplayForm] = useState(false);
 
+  const dispatch = useDispatch();
+  const history = useHistory();
+
+  // REGISTER ----------------------------------------------
+  const { register, handleSubmit } = useForm();
+
+  const onSubmitRegister = (data) => {
+    let url = "/auth/register";
+    api.post(url, data).then((res) => {
+      toast("Inscription validée");
+      console.log(res.data); // token
+    });
+  };
+
+  // LOGIN -------------------------------------------------
   const [form, setForm] = useState({
     email: "",
     password: "",
   });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    Axios.post(`http://localhost:5050/auth/login`, form)
-      .then(({ data }) => {
-        console.log(data);
-      })
-      .catch((e) => {
-        console.log(e);
-      });
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    let newForm = { ...form };
-    newForm[name] = value;
-    setForm(newForm);
+  const onSubmitLogin = (e) => {
+    const { email, password } = form;
+    let url = "/auth/login";
+    let formData = { email, password };
+
+    api
+      .post(url, formData)
+      .then(({ data }) => {
+        const { token, user } = data;
+        cookies.set("token", token);
+        api.defaults.headers.authorization = "Bearer " + token;
+        dispatch({ type: "LOGIN", user });
+        toast(`Vous êtes connecté`);
+        history.push("/mesAnnonces");
+      })
+      .catch((e) => {
+        toast.error("Mauvaise combinaison email / mot de passe");
+      });
   };
 
   return (
     <ConnexionContainer>
       <div>
-        <Formulaire>
+        <Formulaire onSubmit={handleSubmit(onSubmitLogin)}>
           <h2>Se connecter</h2>
           <input
             name="email"
@@ -42,18 +67,13 @@ export default function Connexion() {
           />
           <input
             name="password"
+            onChange={handleChange}
             placeholder="Mot de passe"
             type="password"
             minLength="8"
-            onChange={handleChange}
             required
           />
-          <button
-            name="submit"
-            type="submit"
-            value="Connexion"
-            onSubmit={handleSubmit}
-          >
+          <button name="submit" type="submit" value="Connexion">
             Connection
           </button>
         </Formulaire>
@@ -66,28 +86,28 @@ export default function Connexion() {
         {displayForm ? "Masquer" : "Pas encore client ?"}
       </NotClientButton>
       {displayForm ? (
-        <Formulaire>
+        <Formulaire onSubmit={handleSubmit(onSubmitRegister)}>
           <h2>S'enregistrer</h2>
           <input
             name="name"
             placeholder="Nom"
             type="name"
-            onChange={handleChange}
+            ref={register}
             required
           />
           <input
             name="email"
             placeholder="Email"
             type="email"
-            onChange={handleChange}
+            ref={register}
             required
           />
           <input
             name="password"
+            ref={register}
             placeholder="Mot de passe"
             type="password"
             minLength="8"
-            onChange={handleChange}
             required
           />
           <button name="submit" type="submit" value="Connexion">

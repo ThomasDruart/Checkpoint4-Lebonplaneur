@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Axios from "axios";
+import { api } from "../../conf";
 import GliderCard from "../../components/GliderCard";
 import { GlidersContainer, Cards } from "./style";
 
@@ -7,7 +7,7 @@ export default function GlidersList() {
   const [glidersInfo, setGlidersInfo] = useState([]);
 
   useEffect(() => {
-    Axios.get(`http://localhost:5050/gliders`).then((res) => {
+    api.get(`/gliders`).then((res) => {
       setGlidersInfo(res.data);
     });
   }, []);

@@ -1,6 +1,7 @@
 import React from "react";
-import Axios from "axios";
+import { api } from "../../conf";
 import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 import {
   MainContainer,
   FormBox,
@@ -13,8 +14,8 @@ export default function PostForm() {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
     console.log(data);
-    Axios.post("http://localhost:5050/gliders", data).then(function () {
-      alert("Annonce postée avec succès");
+    api.post("/gliders", data).then(function () {
+      toast("Annonce postée avec succès");
     });
   };
 

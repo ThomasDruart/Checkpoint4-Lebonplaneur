@@ -1,15 +1,16 @@
 const express = require("express");
-const connection = require("./config");
+const passport = require("passport");
 const cors = require("cors");
 
 const port = 5050;
 const app = express();
 
 app.use(express.json());
+app.use(passport.initialize());
 app.use(cors());
 
 // Auth routes
-//app.use("/auth", require("./routes/auth"));
+app.use("/auth", require("./routes/auth"));
 app.use("/", require("./routes/misc"));
 
 // 404 and server launch
