@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useSelector } from 'react-redux'
 import { api } from "../../conf";
+import { UserAdvertsContainer } from "./style";
 
 export default function UserAdverts() {
   const [userAds, setUserAds] = useState([])
@@ -9,19 +10,17 @@ export default function UserAdverts() {
   useEffect(() => {
     api.get(`/${user.id}/adverts`).then(
       (res) => {
-        console.log(res.data);
         setUserAds(res.data);
       }
     );
   }, [user]);
 
   return (
-  <div>
+  <UserAdvertsContainer>
       <h1>Espace personnel - Mes annonces</h1>
-      {userAds.map((ad) => {
-          return <p>annonce</p>;
+      {userAds.length === 0 ? <p>Vous n'avez pas d'annonce pour le moment</p> : userAds.map((ad) => {
+          return <p>{ad.model}</p>;
         })}
-  </div>
+  </UserAdvertsContainer>
   )
 }
-
