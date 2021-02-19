@@ -9,7 +9,7 @@ export const AdCardContainer = styled.div`
   font-family: "Bai Jamjuree", sans-serif;
   display: flex;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 800px) {
     flex-direction: column;
   }
 
@@ -19,7 +19,7 @@ export const AdCardContainer = styled.div`
     object-fit: cover;
     border-radius: 0.2em 0.2em 0 0;
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 800px) {
       width: 80vw;
       height: 30vh;
     }
@@ -32,6 +32,14 @@ export const AdCardContainer = styled.div`
 
 export const AdText = styled.div`
   padding: 1vh 1vw;
+  display: flex;
+  flex-direction: column;
+
+  span {
+    align-self: flex-end;
+    position: absolute;
+    font-size: 1.2em;
+  }
 
   div {
     display: flex;

@@ -6,6 +6,9 @@ export default function AdvertCard({ adInfo }) {
     <AdCardContainer>
       <img src={adInfo.image} alt={adInfo.model} />
       <AdText>
+        <span onClick={() => console.log("delete button")}>
+          <i className="fas fa-trash-alt"></i>
+        </span>
         <div>
           <h2>Modèle :</h2>
           <p>{adInfo.model}</p>
